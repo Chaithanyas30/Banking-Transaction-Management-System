@@ -1,7 +1,7 @@
 INSERT INTO Customers (Name, Email, Phone)
 VALUES 
-('John Doe', 'john@example.com', '9999999999'),
-('Jane Smith', 'jane@example.com', '8888888888');
+('sathish', 'sathish.com', '9999999999'),
+('manoj', 'manoj.com', '8888888888');
 
 INSERT INTO Accounts (CustomerID, AccountType, Balance)
 VALUES 
