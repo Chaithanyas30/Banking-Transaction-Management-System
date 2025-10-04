@@ -13,10 +13,6 @@ It showcases real-world **SQL development, query optimization, and AWS RDS deplo
 - Role-based access control (RBAC)
 - Backup and recovery testing
 
-##  Database Schema
-![ER Diagram](ER_Diagram.png)
-
-
 ##  Technologies Used
 - **MySQL**
 - **AWS RDS**
