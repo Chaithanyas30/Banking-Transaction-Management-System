@@ -1,0 +1,31 @@
+CREATE TABLE Customers (
+  CustomerID INT AUTO_INCREMENT PRIMARY KEY,
+  Name VARCHAR(100),
+  Email VARCHAR(100),
+  Phone VARCHAR(15),
+  CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Accounts (
+  AccountID INT AUTO_INCREMENT PRIMARY KEY,
+  CustomerID INT,
+  AccountType VARCHAR(50),
+  Balance DECIMAL(10,2),
+  FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+CREATE TABLE Transactions (
+  TransactionID INT AUTO_INCREMENT PRIMARY KEY,
+  AccountID INT,
+  Amount DECIMAL(10,2),
+  Type VARCHAR(10),
+  TransactionDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (AccountID) REFERENCES Accounts(AccountID)
+);
+
+CREATE TABLE TransactionLogs (
+  LogID INT AUTO_INCREMENT PRIMARY KEY,
+  TransactionID INT,
+  LogTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (TransactionID) REFERENCES Transactions(TransactionID)
+);
